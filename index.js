@@ -5,28 +5,53 @@ console.log(gScore)
 let homeScore = 0
 let guestScore = 0
 
+function updateScoreboard() {
+    hScore.textContent = homeScore
+    gScore.textContent = guestScore
+
+    // Check for Home leader
+    if (homeScore > guestScore) {
+        hScore.classList.add('win')
+    } else {
+        hScore.classList.remove('win')
+    }
+
+    // Check for Guest leader
+    if (guestScore > homeScore) {
+        gScore.classList.add('win')
+    } else {
+        gScore.classList.remove('win')
+    }
+}
+
 function add1HPoint() {
-    hScore.textContent = homeScore += 1
+    homeScore += 1
+    updateScoreboard()
 }
 
 function add2HPoints() {
-    hScore.textContent = homeScore += 2
+    homeScore += 2
+    updateScoreboard()
 }
 
 function add3HPoints() {
-    hScore.textContent = homeScore += 3
+    homeScore += 3
+    updateScoreboard()
 }
 
 
 
 function add1GPoint() {
-    gScore.textContent = guestScore += 1
+    guestScore += 1
+    updateScoreboard()
 }
 
 function add2GPoints() {
-    gScore.textContent = guestScore += 2
+    guestScore += 2
+    updateScoreboard()
 }
 
 function add3GPoints() {
-    gScore.textContent = guestScore += 3
+    guestScore += 3
+    updateScoreboard()
 }

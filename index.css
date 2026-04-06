@@ -24,8 +24,14 @@ h3 {
 }
 
 .container {
+    width: 100%;
+    max-width: 575px;
+    height: 100vh;
+    max-height: 385px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin: auto;
 }
 
 .home, .guest {
@@ -50,6 +56,11 @@ h3 {
     height: 120px;
     margin: 20px;
     border-radius: 5px;
+}
+
+#home-score.win,
+#guest-score.win {
+    border: 2px solid whitesmoke;
 }
 
 .btn-el {
